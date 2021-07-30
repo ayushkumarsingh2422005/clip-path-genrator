@@ -1,5 +1,6 @@
 window.onload = function(){
     //$('body').html('ayush')
+    alert("Genrate your CSS code for clip path polygon()");
     var counter = 1;
     
     var container_index;
