@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-color: #1b1b1b;
     font-size: 10pt;
-    overflow-y: hidden;
+    overscroll-behavior: none;
 }
 #css, #css_cover{
     background-color: black;
