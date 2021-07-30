@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    font-size: 10pt;
+}
+#css, #css_cover{
+    background-color: black;
+    color: whitesmoke;
+    padding: 15px;
+    position: fixed;
+    overflow: scroll;
+    border-radius: 5px;
+    transition: ease all 2s;
+}
+#css_cover{
+    transition-duration: 0.2s;
+    text-transform: capitalize;
+}
+#working_stage{
+    position: fixed;
+    background-color: black;
+    border-radius: 5px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLQ7OOCtgFqh198BTfbaQ6z_7tETtNhxcWA&usqp=CAU");
+    background-size: cover;
+    transition: ease orientation 2s;
+}
+#insert{
+    position: fixed;
+    padding: 5px 15px;
+    background-color: lime;
+    border-radius: 5px;
+    transition: ease all 2s;
+}
+#delete{
+    position: fixed;
+    padding: 5px 15px;
+    background-color: red;
+    border-radius: 5px;
+    transition: ease all 2s;
+}
+@media (orientation: landscape){
+    #working_stage {
+        width: 70vh;
+        height: 70vh;
+        top: 15vh;
+        left: 10vw;
+    }
+    #css, #css_cover{
+        width: 40vw;
+        left: calc(15vw + 70vh + 5vw);
+        height: 30vh;
+        bottom:20vh;
+    }
+    #insert {
+        top: 20vh;
+        left: calc(15vw + 70vh + 5vw);
+    }
+    #delete {
+        top: 20vh;
+        right: calc(40vw - 70vh);
+    }
+    .dot {
+        top: calc(15vh + 35vh - 10px);
+        left: calc(10vw + 35vh - 10px);
+    }
+}
+@media (orientation: portrait) {
+    #working_stage {
+        width: 60vw;
+        height: 60vw;
+        top: 23vh;
+        left: calc(20vw);
+    }
+    #css, #css_cover{
+        width: 60vw;
+        left: 20vw;
+        height: 20vh;
+        top:calc(15vh + 60vw + 15vh);
+    }
+    #insert {
+        top: 5vh;
+        left: 5vh;
+    }
+    #delete {
+        top: 5vh;
+        right: 5vh;
+    }
+    .dot{
+        top: calc(23vh + 30vw - 10px);
+        left: calc(50vw - 10px);
+    }
+}
+.dot{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes anim{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
